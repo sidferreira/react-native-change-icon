@@ -150,7 +150,6 @@
 
 **iOS 🍏**
 1. At the bottom of your `Info.plist` insert a key for `CFBundleIcons`
-   - Note: For iPad, you need to add the key `CFBundleIcons~ipad`
 2. Within this dictionary add another key for `CFBundleAlternateIcons`
 3. Finally then within this dictionary you can add in the keys for you new icons
    - The `key` is the name you will reference from within code.
@@ -203,20 +202,3 @@ resetIcon();
 ```
 
 > All functions are typed and return a promise that either resolves successfully, or will reject with the error that has occurred.
-
-**react-native-push-notification and notifee**
-
-When using `react-native-push-notification` or `notifee`, notifications won't work as we are using `activity-alias`.
-
-To fix this, you need to create a Java file for each of the `activity-alias` in your `AndroidManifest.xml`.
-
-The file should be placed alongside you `MainActivity.java`. Example:
-```
-android/app/src/main/java/com/myapp/MainActivity<KEY>.java
-```
-The content of this file should be:
-```
-package com.myapp;
-public class MainActivity<KEY> extends MainActivity {}
-```
-Replace `<KEY>` with the icon name used in the manifest. Replace com.myapp with your android app structure.

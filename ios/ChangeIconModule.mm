@@ -1,10 +1,10 @@
+#import "ChangeIconModule.h"
 #import "ChangeIcon.h"
-#import "ChangeIconCore.h"
 #import <React/RCTUtils.h>
 
 using namespace facebook::react;
 
-@implementation ChangeIcon
+@implementation ChangeIconModule
 
 RCT_EXPORT_MODULE()
 
@@ -45,20 +45,20 @@ RCT_EXPORT_METHOD(resetIcon:(RCTPromiseResolveBlock)resolve
 - (void)getIcon:(RCTPromiseResolveBlock)resolve
        reject:(RCTPromiseRejectBlock)reject
 {
-    [ChangeIconCore getIcon:resolve reject:reject];
+    [ChangeIcon getIcon:resolve reject:reject];
 }
 
 - (void)changeIcon:(NSString *)iconName
           resolve:(RCTPromiseResolveBlock)resolve
           reject:(RCTPromiseRejectBlock)reject
 {
-    [ChangeIconCore changeIcon:iconName resolve:resolve reject:reject];
+    [ChangeIcon changeIcon:iconName resolve:resolve reject:reject];
 }
 
 - (void)resetIcon:(RCTPromiseResolveBlock)resolve
           reject:(RCTPromiseRejectBlock)reject
 {
-    [ChangeIconCore resetIcon:resolve reject:reject];
+    [ChangeIcon resetIcon:resolve reject:reject];
 }
 #endif
 

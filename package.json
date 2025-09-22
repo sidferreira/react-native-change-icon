@@ -3,15 +3,15 @@
   "title": "React Native Change Icon",
   "version": "5.0.0",
   "description": "Change application icon programmatically in React-Native.",
-  "main": "dist/index.js",
-  "source": "src/index.ts",
-  "react-native": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./specs/NativeChangeIcon.ts",
+  "source": "./specs/NativeChangeIcon.ts",
+  "react-native": "./specs/NativeChangeIcon.ts",
+  "types": "./specs/NativeChangeIcon.ts",
   "files": [
     "android",
     "ios",
     "dist/**/*",
-    "NativeChangeIcon.ts",
+    "specs/NativeChangeIcon.ts",
     "react-native-change-icon.podspec",
     "react-native.config.js",
     "README.md"
@@ -46,7 +46,7 @@
   "codegenConfig": {
     "name": "RNChangeIconSpec",
     "type": "all",
-    "jsSrcsDir": ".",
+    "jsSrcsDir": "./specs",
     "android": {
       "javaPackageName": "com.facebook.fbreact.specs"
     }

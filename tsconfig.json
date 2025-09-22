@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-change-icon": ["./src/index"]
+      "react-native-change-icon": ["./specs/NativeChangeIcon"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -27,5 +27,5 @@
     "target": "esnext",
     "verbatimModuleSyntax": true
   },
-  "files": ["./src/index.ts"]
+  "files": ["./specs/NativeChangeIcon.ts"]
 }
